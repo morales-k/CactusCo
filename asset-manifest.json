@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/CactusCo/static/css/main.5440d43e.css",
+    "main.js": "/CactusCo/static/js/main.41337a56.js",
+    "static/media/cactuspink.png": "/CactusCo/static/media/cactuspink.f26803f976e00a7dfe1e.png",
+    "static/media/sandcactus.png": "/CactusCo/static/media/sandcactus.c864e8d963ef540ac43a.png",
+    "static/media/succulentvariety.png": "/CactusCo/static/media/succulentvariety.ec2a80236a2cad673394.png",
+    "static/media/cactusgray.png": "/CactusCo/static/media/cactusgray.571a34dc066246b21349.png",
+    "static/media/greencactus.png": "/CactusCo/static/media/greencactus.267018837177b7e13ef9.png",
+    "static/media/grasscactus.png": "/CactusCo/static/media/grasscactus.2bbdbc8bd4b4ef406284.png",
+    "static/media/brownplantercactus.png": "/CactusCo/static/media/brownplantercactus.bc83827423d1f863ebb3.png",
+    "static/media/cactuspair.png": "/CactusCo/static/media/cactuspair.fb9b577872e408b0fa48.png",
+    "static/media/redcactus.png": "/CactusCo/static/media/redcactus.da0128689df429a29f26.png",
+    "static/media/bunnyearcactus.png": "/CactusCo/static/media/bunnyearcactus.52af81ea01c35ba68f81.png",
+    "static/media/spottedhaworthia.png": "/CactusCo/static/media/spottedhaworthia.a979f462e3346df001a7.png",
+    "static/media/haworthia.png": "/CactusCo/static/media/haworthia.1a241fc96aa63b0870d4.png",
+    "static/media/cactus.svg": "/CactusCo/static/media/cactus.b0298f793fa5cea1797015a2a7073d09.svg",
+    "index.html": "/CactusCo/index.html",
+    "main.5440d43e.css.map": "/CactusCo/static/css/main.5440d43e.css.map",
+    "main.41337a56.js.map": "/CactusCo/static/js/main.41337a56.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5440d43e.css",
+    "static/js/main.41337a56.js"
+  ]
+}
