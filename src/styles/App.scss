@@ -1,0 +1,13 @@
+@import './Shared/shared.scss';
+@import './Nav/nav.scss';
+@import './Products/products.scss';
+@import './Cart/cart.scss';
+@import './Checkout/checkout.scss';
+
+body {
+  background-color: #e8e8e8;
+}
+
+.hidden {
+  display: none;
+}
