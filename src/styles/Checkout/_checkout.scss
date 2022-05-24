@@ -1,9 +1,7 @@
+@use '../Shared/shared' as *;
+
 .checkout {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  @include flexCenter(column);
   padding: 2%;
 }
 
@@ -16,8 +14,8 @@
   padding: 2%;
   background-color: whitesmoke;
   border-radius: 3px;
-  border: 1px solid #757575;
-  box-shadow: 0 0 2px #757575;
+  border: 1px solid $gray;
+  box-shadow: 0 0 2px $gray;
 }
 
 #checkoutForm fieldset {
@@ -28,7 +26,7 @@
 
 #checkoutForm fieldset:last-of-type {
   margin-bottom: 20px;
-  border: 1px solid #757575;
+  border: 1px solid $gray;
 }
 
 #checkoutForm legend {
@@ -47,7 +45,7 @@
   margin-bottom: 10px;
 }
 
-#checkoutForm input[type=checkbox] {
+#checkoutForm input[type="checkbox"] {
   margin-bottom: 0;
 }
 
@@ -80,7 +78,7 @@
 }
 
 .checkout .color-btn::after {
-  background-color: #BF7D77;
+  background-color: $paleRed;
   background-color: rgba(191, 125, 119, 0.6);
 }
 
@@ -95,8 +93,8 @@
   bottom: 50%;
   padding: 2%;
   background-color: whitesmoke;
-  border: 1px solid #757575;
-  box-shadow: 0 0 2px #757575;
+  border: 1px solid $gray;
+  box-shadow: 0 0 2px $gray;
   border-radius: 3px;
   z-index: 1;
 }
@@ -112,4 +110,4 @@
 
 .checkout h1 {
   letter-spacing: 0.1rem;
-}/*# sourceMappingURL=checkout.css.map */
+}

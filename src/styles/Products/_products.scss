@@ -1,9 +1,7 @@
+@use '../Shared/shared' as *;
+
 .products-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  @include flexCenter(row);
   max-width: 1150px;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -13,29 +11,21 @@
 
 .product-wrapper {
   margin: 20% 2%;
-}
-@media screen and (min-width: 700px) {
-  .product-wrapper {
+  @media screen and (min-width: 700px) {
     margin-bottom: 5%;
   }
-}
-@media screen and (min-width: 1500px) {
-  .product-wrapper {
+  @media screen and (min-width: 1500px) {
     margin-bottom: 0;
   }
 }
 
 .product {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  @include flexCenter(column);
   width: 230px;
   height: 230px;
   justify-content: space-between;
   margin: 2%;
-  border: 1px solid #757575;
+  border: 1px solid $gray;
   border-radius: 2px;
   position: relative;
 }
@@ -59,24 +49,20 @@
 }
 
 .product-buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  @include flexCenter(row);
   justify-content: space-around;
   width: 100%;
   color: #1a1a1a;
   margin: 0;
   padding: 6% 0;
-  border: 1px solid #757575;
+  border: 1px solid $gray;
 }
 
 .product-buttons button {
   background-color: #FAFBF9;
   border-radius: 4px;
-  border: 1px solid #b6bfa8;
-  box-shadow: 0 1px 1px #b6bfa8;
+  border: 1px solid $paleGreen;
+  box-shadow: 0 1px 1px $paleGreen;
   padding: 2% 4%;
 }
 
@@ -89,18 +75,18 @@
 .product-buttons button:active {
   cursor: pointer;
   border-style: inset;
-  box-shadow: 0 0 1px #757575;
+  box-shadow: 0 0 1px $gray;
 }
 
 .product-buttons button[disabled] {
   background-color: #ccc;
-  color: #1a1a1a;
+  color: $black;
   text-transform: uppercase;
   cursor: default;
 }
 
 .product-buttons button[disabled]:hover {
-  box-shadow: 0 1px 1px #b6bfa8;
-  border: 1px solid #b6bfa8;
+  box-shadow: 0 1px 1px $paleGreen;
+  border: 1px solid $paleGreen;
   cursor: default;
-}/*# sourceMappingURL=products.css.map */
+}

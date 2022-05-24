@@ -1,12 +1,10 @@
+@use '../Shared/shared' as *;
+
 nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  @include flexCenter(row);
   justify-content: space-between;
   background-color: #f2f2f2;
-  box-shadow: 0 2px 3px #b6bfa8;
+  box-shadow: 0 2px 3px $paleGreen;
   padding: 4%;
 }
 
@@ -17,7 +15,7 @@ nav {
   text-transform: uppercase;
   padding: 13px 20px 13px;
   outline: 0;
-  border: 1px solid #1a1a1a;
+  border: 1px solid $black;
   cursor: pointer;
   position: relative;
   background-color: rgba(0, 0, 0, 0);
@@ -26,7 +24,7 @@ nav {
 
 .color-btn::after {
   content: "";
-  background-color: #97b8e3;
+  background-color: $paleBlue;
   background-color: rgba(151, 184, 227, 0.6);
   width: 100%;
   z-index: -1;
@@ -43,15 +41,11 @@ nav {
 }
 
 .logo {
-  border-bottom: 2px solid #1a1a1a;
+  border-bottom: 2px solid $black;
 }
 
 .cart-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  @include flexCenter(row);
   align-items: flex-end;
   position: relative;
 }
@@ -67,18 +61,14 @@ nav {
 }
 
 .cart-item-count {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  @include flexCenter(column);
   width: 18px;
   height: 18px;
   position: absolute;
   top: -5%;
   right: -5%;
   justify-content: flex-start;
-  background-color: #1a1a1a;
+  background-color: $black;
   color: #f2f2f2;
   font-size: 0.8rem;
   border-radius: 50%;
@@ -96,4 +86,4 @@ nav {
   .logo {
     height: 120px;
   }
-}/*# sourceMappingURL=nav.css.map */
+}
