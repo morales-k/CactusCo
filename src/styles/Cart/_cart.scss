@@ -6,6 +6,9 @@
 }
 
 .cart h1 {
+  position: relative;
+  top: 100px;
+  z-index: 2;
   letter-spacing: 0.1rem;
 }
 
@@ -21,6 +24,7 @@
   box-sizing: border-box;
   padding: 2%;
   margin-bottom: 20px;
+  padding-top: 70px;
   padding-bottom: 120px;
   background-color: whitesmoke;
   border-radius: 3px;
