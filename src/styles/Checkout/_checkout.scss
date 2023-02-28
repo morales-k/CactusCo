@@ -1,0 +1,113 @@
+@use '../Shared/shared' as *;
+
+.checkout {
+  @include flexCenter(column);
+  padding: 2%;
+}
+
+#checkoutForm {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 2%;
+  background-color: whitesmoke;
+  border-radius: 3px;
+  border: 1px solid $gray;
+  box-shadow: 0 0 2px $gray;
+}
+
+#checkoutForm fieldset {
+  display: flex;
+  flex-direction: column;
+  margin: 5%;
+}
+
+#checkoutForm fieldset:last-of-type {
+  margin-bottom: 20px;
+  border: 1px solid $gray;
+}
+
+#checkoutForm legend {
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 10px;
+}
+
+#checkoutForm label {
+  align-self: flex-start;
+  padding: 2% 1%;
+}
+
+#checkoutForm input {
+  padding: 1%;
+  margin-bottom: 10px;
+}
+
+#checkoutForm input[type="checkbox"] {
+  margin-bottom: 0;
+}
+
+#checkoutForm select {
+  width: 110px;
+  padding: 1%;
+  margin-bottom: 10px;
+}
+
+#shipZip, #billZip, #cvc, #expiration {
+  width: 100px;
+}
+
+.form-row {
+  max-width: 250px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.form-row.sm-width {
+  max-width: 160px;
+}
+
+.form-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout .color-btn::after {
+  background-color: $paleRed;
+  background-color: rgba(191, 125, 119, 0.6);
+}
+
+.error {
+  border: 1px solid red;
+}
+
+.confirmation {
+  height: 250px;
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  padding: 2%;
+  background-color: whitesmoke;
+  border: 1px solid $gray;
+  box-shadow: 0 0 2px $gray;
+  border-radius: 3px;
+  z-index: 1;
+}
+
+.close {
+  display: block;
+  text-align: right;
+  margin-top: -10px;
+  font-size: 2rem;
+  color: red;
+  cursor: pointer;
+}
+
+.checkout h1 {
+  letter-spacing: 0.1rem;
+}

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="116.001" height="103.136" viewBox="0 0 116.001 103.136">
+  <g id="cactus" transform="translate(-5060.999 -237.864)">
+    <g id="cactus-2" data-name="cactus" transform="translate(5062 238.864)">
+      <path id="Path_3" data-name="Path 3" d="M3225-625.476v-26.835s1.147-6.356,7.15-6.356,6.709,6.356,6.709,6.356h0s-.9,32.746-3.178,36.809c-2.925,5.218-7.712,8.979-10.681,9.18" transform="translate(-3184.219 691.893)" fill="none" stroke="#b6bfa8" stroke-width="2"/>
+      <path id="Path_4" data-name="Path 4" d="M3245.656-609.2v-40s-1.052-9.473-10-9.473S3225-649.194,3225-649.194v90.664" transform="translate(-3208.052 658.667)" fill="none" stroke="#b6bfa8" stroke-width="2"/>
+      <path id="Path_5" data-name="Path 5" d="M3238.858-625.476v-26.835s-1.147-6.356-7.15-6.356-6.709,6.356-6.709,6.356h0s.9,32.746,3.178,36.809c2.925,5.218,7.712,8.979,10.681,9.18" transform="translate(-3225 667.265)" fill="none" stroke="#b6bfa8" stroke-width="2"/>
+      <g id="Group_3" data-name="Group 3" transform="translate(39.673 21.274)">
+        <path id="Path_6" data-name="Path 6" d="M3809.2-696.937s-5.12-.662-6.179-3.487,5.649.618,5.649.618,3.884,1.854,3.884,2.383c0,.266-.094.645-1.147.662A17.381,17.381,0,0,1,3809.2-696.937Z" transform="translate(-3802.616 707.433)" fill="#bf7d77"/>
+        <path id="Path_8" data-name="Path 8" d="M3806.259-696.937s5.12-.662,6.179-3.487-5.649.618-5.649.618-3.884,1.854-3.884,2.383c0,.266.094.645,1.147.662A17.383,17.383,0,0,0,3806.259-696.937Z" transform="translate(-3795.996 707.433)" fill="#bf7d77"/>
+        <path id="Path_9" data-name="Path 9" d="M3.354,4.6s5.12-.662,6.179-3.487C10.2-.67,7.785.038,5.829.837c-1.027.419-1.945.891-1.945.891S0,3.582,0,4.111c0,.266.094.645,1.148.662A17.394,17.394,0,0,0,3.354,4.6Z" transform="matrix(0.391, -0.921, 0.921, 0.391, 4.209, 8.88)" fill="#bf7d77"/>
+        <path id="Path_10" data-name="Path 10" d="M3.354,4.6s5.12-.662,6.179-3.487-5.649.618-5.649.618S0,3.585,0,4.114c0,.266.094.645,1.148.662A17.394,17.394,0,0,0,3.354,4.6Z" transform="translate(5.826 6.681) rotate(-29)" fill="#bf7d77"/>
+        <path id="Path_11" data-name="Path 11" d="M3.354.177s5.12.662,6.179,3.487-5.649-.618-5.649-.618S0,1.192,0,.663C0,.4.094.018,1.148,0A17.4,17.4,0,0,1,3.354.177Z" transform="matrix(-0.875, -0.485, 0.485, -0.875, 8.437, 10.859)" fill="#bf7d77"/>
+        <path id="Path_25" data-name="Path 25" d="M3.354.177s5.12.662,6.179,3.487c.667,1.78-1.748,1.072-3.7.273C4.8,3.517,3.884,3.046,3.884,3.046S0,1.192,0,.663C0,.4.094.018,1.148,0A17.4,17.4,0,0,1,3.354.177Z" transform="matrix(-0.391, -0.921, 0.921, -0.391, 7.978, 10.745)" fill="#bf7d77"/>
+      </g>
+    </g>
+    <text id="Cactus_Co." data-name="Cactus Co." transform="translate(5081 337)" fill="#1a1a1a" font-size="20" font-family="Bahnschrift" font-weight="300" letter-spacing="0.01em"><tspan x="0" y="0">Cactus Co.</tspan></text>
+  </g>
+</svg>

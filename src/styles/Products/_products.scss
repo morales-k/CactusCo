@@ -1,0 +1,97 @@
+@use '../Shared/shared' as *;
+
+.products-container {
+  @include flexCenter(row);
+  max-width: 1150px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 0 auto 20% auto;
+  box-sizing: border-box;
+  background-color: rgba(242, 242, 242, 0.9);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding-bottom: 10%;
+}
+
+.product-wrapper {
+  margin: 20% 2%;
+  @media screen and (min-width: 700px) {
+    margin-bottom: 5%;
+  }
+  @media screen and (min-width: 1500px) {
+    margin-bottom: 0;
+  }
+}
+
+.product {
+  @include flexCenter(column);
+  width: 230px;
+  height: 230px;
+  justify-content: space-between;
+  margin: 2%;
+  border: 1px solid $gray;
+  border-radius: 2px;
+  position: relative;
+}
+
+.name-cost {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  margin-bottom: 4%;
+}
+
+.name-cost span:first-of-type {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.product-icon {
+  width: 120px;
+  height: 120px;
+  margin: 2%;
+}
+
+.product-buttons {
+  @include flexCenter(row);
+  justify-content: space-around;
+  width: 100%;
+  background-color: #bababa;
+  color: #1a1a1a;
+  margin: 0;
+  padding: 6% 0;
+  border: 1px solid $gray;
+}
+
+.product-buttons button {
+  background-color: #FAFBF9;
+  border-radius: 4px;
+  border: 1px solid $paleGreen;
+  box-shadow: 0 1px 1px $paleGreen;
+  padding: 2% 4%;
+}
+
+.product-buttons button:hover {
+  cursor: pointer;
+  border-style: solid;
+  box-shadow: 0 0 1px #e8e8e8;
+}
+
+.product-buttons button:active {
+  cursor: pointer;
+  border-style: inset;
+  box-shadow: 0 0 1px $gray;
+}
+
+.product-buttons button[disabled] {
+  background-color: #ccc;
+  color: $black;
+  text-transform: uppercase;
+  cursor: default;
+}
+
+.product-buttons button[disabled]:hover {
+  box-shadow: 0 1px 1px $paleGreen;
+  border: 1px solid $paleGreen;
+  cursor: default;
+}
