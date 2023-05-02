@@ -6,6 +6,7 @@ export default function Cart() {
   const [itemCount, setItemCount] = useState(0);
   const [totalCost, setTotalCost] = useState(0);
   const [showMessage, setShowMessage] = useState(false);
+  const [messageItemID, setMessageItemID] = useState(null);
   const state = useSelector(state => state);
   const dispatch = useDispatch();
 
@@ -32,6 +33,7 @@ export default function Cart() {
   const handleMessage = () => {
     setShowMessage(true);
     setTimeout(() => setShowMessage(false), 4000);
+    setTimeout(() => setMessageItemID(null), 4000);
   };
 
   return (
@@ -44,11 +46,6 @@ export default function Cart() {
             itemCount <= 0 ? 
             <li>No items in cart.</li> : 
             <li>{`${itemCount} items in cart`}</li>
-          }
-          {
-            showMessage ?
-            <li className="not-avail-msg">No additional product available</li> : 
-            null
           }
           {
             state.cart.addedItems.map(item => {
@@ -67,12 +64,18 @@ export default function Cart() {
                           addProduct(item, {...state.cart}, dispatch, 1);
                           // Display message if there is no more of an item available.
                           if (currentItem[0].quantityAvailable <= 0) {
+                            setMessageItemID(item.id);
                             handleMessage();
                           }
                         }
                       }
                     disabled={currentItem[0].quantityAvailable <= 0}>+</button>
                   </span>
+                  {
+                    showMessage && messageItemID === item.id ?
+                    <span className="not-avail-msg">No additional product available</span> : 
+                    null
+                  }
                 </li>
               }
             })
