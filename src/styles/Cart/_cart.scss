@@ -107,11 +107,20 @@ li span:first-of-type {
   background-color: #ccc;
 }
 
+.cart span.not-avail-msg {
+  padding: 2%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
 .not-avail-msg {
+  width: 260px;
   position: absolute;
-  top: 20px;
-  right: 5px;
+  background-color: #FAFBF9;
   color: #ce0000;
+  border-radius: 4px;
+  border: 1px solid $gray;
 }
 
 @media screen and (min-width: 731px) {
