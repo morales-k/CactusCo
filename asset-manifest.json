@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/CactusCo/static/css/main.b93e6c81.css",
-    "main.js": "/CactusCo/static/js/main.fcfdee44.js",
+    "main.css": "/CactusCo/static/css/main.c413f2f1.css",
+    "main.js": "/CactusCo/static/js/main.9f3db118.js",
     "static/media/leaves.jpg": "/CactusCo/static/media/leaves.a241d318393404bcd78a.jpg",
     "static/media/cactuspink.png": "/CactusCo/static/media/cactuspink.f26803f976e00a7dfe1e.png",
     "static/media/sandcactus.png": "/CactusCo/static/media/sandcactus.c864e8d963ef540ac43a.png",
@@ -17,11 +17,11 @@
     "static/media/haworthia.png": "/CactusCo/static/media/haworthia.1a241fc96aa63b0870d4.png",
     "static/media/cactus.svg": "/CactusCo/static/media/cactus.b0298f793fa5cea1797015a2a7073d09.svg",
     "index.html": "/CactusCo/index.html",
-    "main.b93e6c81.css.map": "/CactusCo/static/css/main.b93e6c81.css.map",
-    "main.fcfdee44.js.map": "/CactusCo/static/js/main.fcfdee44.js.map"
+    "main.c413f2f1.css.map": "/CactusCo/static/css/main.c413f2f1.css.map",
+    "main.9f3db118.js.map": "/CactusCo/static/js/main.9f3db118.js.map"
   },
   "entrypoints": [
-    "static/css/main.b93e6c81.css",
-    "static/js/main.fcfdee44.js"
+    "static/css/main.c413f2f1.css",
+    "static/js/main.9f3db118.js"
   ]
 }
