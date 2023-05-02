@@ -70,12 +70,6 @@ li span:first-of-type {
   background-color: $paleGreen;
 }
 
-.edit-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-
 .cart .color-btn::after {
   background-color: $paleGreen;
   background-color: rgba(182, 191, 168, 0.6);
@@ -83,6 +77,41 @@ li span:first-of-type {
 
 .item-amt {
   width: 25px;
+}
+
+.cart-btns {
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+  color: #000;
+}
+
+.cart-btns button {
+  width: 50px;
+  height: 25px;
+  background-color: #FAFBF9;
+  border-radius: 4px;
+  border: 1px solid $gray;
+  box-shadow: 0 1px 1px $gray;
+}
+
+.cart-btns button:active:not([disabled]) {
+  border-style: inset;
+  box-shadow: none;
+}
+
+.cart-btns button:disabled {
+  box-shadow: none;
+  border: none;
+  background-color: #ccc;
+}
+
+.not-avail-msg {
+  position: absolute;
+  top: 20px;
+  right: 5px;
+  color: #ce0000;
 }
 
 @media screen and (min-width: 731px) {

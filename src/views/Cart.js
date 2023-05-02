@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
+import { addProduct, removeProduct } from '../viewmodel/productVM';
 
 export default function Cart() {
   const [itemCount, setItemCount] = useState(0);
   const [totalCost, setTotalCost] = useState(0);
-  const [editing, toggleEditing] = useState(false);
+  const [showMessage, setShowMessage] = useState(false);
   const state = useSelector(state => state);
   const dispatch = useDispatch();
 
@@ -23,76 +24,15 @@ export default function Cart() {
     }
   }, [state]);
 
-  // Get listItems and check if quantities were updated.
-  function editCart() {
-    if (editing) {
-      const updatedCart = {...state.cart};
-      const updatedProducts = {...state.products}
-      const listItems = document.getElementsByClassName('item-amt');
-
-      // Get all input data attributes and their values.
-      Object.keys(listItems).map(listItem => {
-        const productId = listItems[listItem].attributes.data.nodeValue;
-        const updatedQuantity = listItems[listItem].value;
-        let previousQuantity = 0;
-
-        // If quantity updated, get productId & original amount from cart.
-        if (updatedQuantity !== "") {
-          updatedCart.addedItems.map(addedItem => {
-            if (addedItem.id === productId) {
-              previousQuantity = addedItem.quantity;
-              addedItem.quantity = updatedQuantity;
-
-              // Update available products.
-              updatedProducts.allProducts.map(updatedProduct => {
-                if (updatedProduct.id === productId) {
-                   if (updatedQuantity < previousQuantity) {
-                     // If items removed from cart:
-                      updatedProduct.quantityAvailable += (previousQuantity - updatedQuantity);
-                  } else if (updatedQuantity > previousQuantity) {
-                    // If items added to cart:
-                      updatedProduct.quantityAvailable -= (updatedQuantity - previousQuantity);
-                  }
-                }
-              });
-              dispatch({type: 'UPDATE_PRODUCTS', updatedProducts});
-            }
-          });
-          dispatch({type: 'UPDATE_ITEMS', updatedCart});
-        }
-
-      });
-    }
-    toggleEditing(!editing);
-  }
-
-  // Verifies inputs contain only digits & are <= to available quantity.
-  function verifyInput(e) {
-    const currentProduct = e.target.attributes.data.nodeValue;
-    const currentValue = parseInt(e.target.value);
-    const previousValue = parseInt(e.target.attributes.placeholder.nodeValue);
-    const isNum = new RegExp(/^\d+$/);
-
-    if (!isNum.test(e.target.value)) {
-      e.target.value = '';
-      return;
-    } else {
-      if (currentValue > previousValue) {
-        // Check available quantity.
-        state.products.allProducts.map(product => {
-          if (product.id === currentProduct && 
-              product.quantityAvailable + previousValue < currentValue) {
-            e.target.value = '';
-          }
-        });
-      }
-    }
-  }
-
   function showCheckout() {
       const updatedDisplay = !state.display.displayCart;
       dispatch({type: 'DISPLAY_CHECKOUT', updatedDisplay});
   }
+
+  const handleMessage = () => {
+    setShowMessage(true);
+    setTimeout(() => setShowMessage(false), 4000);
+  };
 
   return (
     <div className={state.display.displayCart ? 'cart' : 'hidden'}>
@@ -103,26 +43,36 @@ export default function Cart() {
           {
             itemCount <= 0 ? 
             <li>No items in cart.</li> : 
-            <li>
-              <button className="outline-btn edit-btn" onClick={() => editCart()}>
-                {
-                  editing ? "Update" : "Edit Cart"
-                }
-              </button>
-            </li>
+            <li>{`${itemCount} items in cart`}</li>
+          }
+          {
+            showMessage ?
+            <li className="not-avail-msg">No additional product available</li> : 
+            null
           }
           {
             state.cart.addedItems.map(item => {
+              let currentItem = state.products.allProducts.filter(product => product.id === item.id);
+
               if (item.quantity > 0) {
                 return <li key={item.id}>
                   <img className="cart-img" src={item.img} alt={item.alt} />
                   <span>{item.name}</span>
                   <span>${item.cost}</span>
-                  {
-                    editing ? 
-                    <input data={item.id} className="item-amt" type="text" placeholder={parseInt(item.quantity)} onChange={(e) => verifyInput(e)} /> :
+                  <span className="cart-btns">
+                    <button onClick={() => removeProduct(item, {...state.cart}, dispatch, 1)}>-</button>
                     <span>x{parseInt(item.quantity)}</span>
-                  }
+                    <button 
+                    onClick={() => {
+                          addProduct(item, {...state.cart}, dispatch, 1);
+                          // Display message if there is no more of an item available.
+                          if (currentItem[0].quantityAvailable <= 0) {
+                            handleMessage();
+                          }
+                        }
+                      }
+                    disabled={currentItem[0].quantityAvailable <= 0}>+</button>
+                  </span>
                 </li>
               }
             })

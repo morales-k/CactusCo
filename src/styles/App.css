@@ -66,12 +66,6 @@ li span:first-of-type {
   background-color: #b6bfa8;
 }
 
-.edit-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-
 .cart .color-btn::after {
   background-color: #b6bfa8;
   background-color: rgba(182, 191, 168, 0.6);

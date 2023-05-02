@@ -11,3 +11,7 @@ $paleRed: #BF7D77;
   align-items: center;
   text-align: center;
 }
+
+button:not([disabled]) {
+  cursor: pointer;
+}
