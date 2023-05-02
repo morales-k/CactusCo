@@ -32,7 +32,9 @@ export default function Product(props) {
             <div className="product-buttons">
               <button onClick={() => handleQuantity('remove')}>-</button>
               <span>{quantity} of {product.quantityAvailable}</span>
-              <button onClick={() => handleQuantity('add')}>+</button>
+              <button 
+                onClick={() => handleQuantity('add')}
+                disabled={product.quantityAvailable === quantity}>+</button>
               <button onClick={quantity === 0 ? null : () => {
                 addProduct(product, {...state.cart}, dispatch, quantity);
                 setQuantity(0);
